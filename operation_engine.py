@@ -5,6 +5,12 @@ from fuzzywuzzy import process
 
 
 def take_exam(driver: WebDriver):
+    driver.maximize_window()
+    page0_enter_list = driver.find_element_by_id("examEntrance")
+    page0_enter_list.click()
+    time.sleep(2)
+    driver.switch_to_window(driver.window_handles[1])
+
     # 进行实验室安全在线校级卷
     # 进入选择考场界面
     page1_enter_list = driver.find_elements_by_class_name("fl")
@@ -33,6 +39,11 @@ def take_exam(driver: WebDriver):
 
 
 def goto_result(driver: WebDriver):
+    page0_enter_list = driver.find_element_by_id("examEntrance")
+    page0_enter_list.click()
+    time.sleep(2)
+    driver.switch_to_window(driver.window_handles[1])
+
     page1_enter_list = driver.find_elements_by_class_name("fl")
     for candidate in page1_enter_list:
         if candidate.text.replace(" ", "") == "考试成绩查询及合格证打印":

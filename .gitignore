@@ -152,4 +152,4 @@ cython_debug/
 #.idea/
 
 asset/*cookie*
-environment.py
+environment_template.py

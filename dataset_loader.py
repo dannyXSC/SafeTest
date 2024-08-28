@@ -5,7 +5,7 @@ import re
 from selenium import webdriver
 
 from cookie_engine import driver_get_with_cookies
-from environment import dataset_path, driver_path, main_page
+from environment_template import dataset_path, driver_path, main_page
 from operation_engine import goto_result
 from question import Question
 from question_engine import load_question_list

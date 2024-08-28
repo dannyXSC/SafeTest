@@ -3,7 +3,7 @@ import os
 import time
 from selenium import webdriver
 
-from environment import cookie_path, input_wait_time, auth_url, driver_path, if_load_cookie, main_page
+from environment_template import cookie_path, input_wait_time, auth_url, driver_path, if_load_cookie, main_page
 
 
 def load_cookies(log_url, browser, path=cookie_path):
