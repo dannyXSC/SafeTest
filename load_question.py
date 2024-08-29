@@ -1,7 +1,7 @@
 import os
 
 from dataset_loader import default_load, local_load, web_load
-from environment_template import question_path
+from environment import question_path
 from question_engine import question_list_merge, save_question_list
 
 if __name__ == "__main__":
