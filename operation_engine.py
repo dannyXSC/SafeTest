@@ -1,10 +1,15 @@
 import time
-
+import os
 from selenium.webdriver.remote.webdriver import WebDriver, WebElement
 from fuzzywuzzy import process
-
+from selenium import webdriver
+from environment import main_page
 
 def take_exam(driver: WebDriver):
+    # 当前页面并非预期页面，需要重定向
+    driver.execute_script(f"window.location.href = '{main_page}';")
+    
+    time.sleep(2)
     # 进行实验室安全在线校级卷
     # 进入选择考场界面
     page1_enter_list = driver.find_elements_by_class_name("fl")
